@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "React Webpack Extension",
+  "description": "A basic react webpack extension.",
+  "version": "1.0.0",
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  },
+  "action": {
+    "default_title": "react webpack extension",
+    "default_popup": "html/popup.html"
+  },
+  "background": {
+    "service_worker": "js/background.bundle.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/content.bundle.js"],
+      "css": ["css/index.css"]
+    }
+  ],
+  "host_permissions": ["<all_urls>"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

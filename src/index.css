@@ -1,0 +1,17 @@
+body {
+  position: relative;
+}
+#ts-ext-btn {
+  border: none !important;
+  color: white !important;
+  width: 100px;
+  outline: 2px solid blue !important;
+  position: fixed !important;
+  bottom: 2rem !important;
+  left: 50% !important;
+  right: unset !important;
+  top: unset !important;
+  transform: translateX(-50%) !important;
+  z-index: 9999999 !important;
+  cursor: pointer !important;
+}
